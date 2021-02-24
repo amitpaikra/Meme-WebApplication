@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meme</title>
+  <link rel="stylesheet" href="/css/style.css">
+ 
+</head>
+<body>
+
+<div>
+  
+  <form action = "/" method="POST">
+
+    <!--<label>
+      <input type="text" class="input" name="id" placeholder="Enter id" required/>
+        <div class="line-box">
+          <div class="line"></div>
+        </div>
+    </label> -->
+    
+
+    <label>
+      <input type="text" class="input" name="name" placeholder="Enter name" required/>
+        <div class="line-box">
+          <div class="line"></div>
+        </div>
+    </label>
+
+    <label>
+        <input type="text" class="input" name="url" placeholder="Enter url" required/>
+        <div class="line-box">
+          <div class="line"></div>
+        </div>
+    </label>
+
+    <label>
+        <input type="text" class="input" name="caption" placeholder="Enter caption" required/>
+        <div class="line-box">
+          <div class="line"></div>
+        </div>
+    </label>
+
+    
+    <button type="submit">submit</button>
+  </form>
+</div>
+
+<center>
+    <div class = "wrapper" >
+        <div class = "meme">
+            <% datas.forEach ( function( row ) { %>
+                
+                    <img src = <%= row.url %><br>
+                    <%= row.name %><br>
+                    <%= row.caption %><br><br>
+                    <br>
+            <% })%>
+        
+            
+        </div>
+    </div>
+</center>
+ </body>
+</html>
